@@ -27,7 +27,14 @@ class SessionsController < ApplicationController
       session[:access_token] = @access_token.token
       session[:secret_token] = @access_token.secret
       session[:user] = true
-      redirect_to '/welcome/home'
+      CurrentUser.access_token = @access_token.token
+      CurrentUser.access_token_secret = @access_token.secret
+      if CurrentUser.save
+        redirect_to '/welcome/home'
+      else
+        # todo raise exception 
+        puts 'error saving user'
+      end
     else
       redirect_to '/sessions/connect'
     end
