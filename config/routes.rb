@@ -1,6 +1,7 @@
 Oauthspike::Application.routes.draw do
   get "welcome/index"
   get "welcome/home"
+  get "welcome/meekwire"
   get "sessions/connect"
   get "sessions/callback"
   get "sessions/signout"

@@ -5,4 +5,8 @@ class WelcomeController < ApplicationController
   
   def index
   end
+  
+  def meekwire
+  end 
+  
 end

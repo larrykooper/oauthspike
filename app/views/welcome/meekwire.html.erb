@@ -1,0 +1,7 @@
+<% t = Twitterauth::Client.user_timeline(:screen_name => "meekwire", :count => 1, :include_rts => 1) %>
+
+<%= t[0]["created_at"] %>
+<br><br><br><br><br><br><br>
+
+<%= t %>
+ 
