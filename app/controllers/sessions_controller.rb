@@ -32,7 +32,7 @@ class SessionsController < ApplicationController
       if CurrentUser.save
         redirect_to '/welcome/home'
       else
-        # todo raise exception 
+        # TODO raise exception 
         puts 'error saving user'
       end
     else
