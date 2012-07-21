@@ -14,3 +14,4 @@
 /log/*.log
 /tmp
 /config/initializers/twitterauth.rb
+/config/initializers/02_twitterauth.rb
